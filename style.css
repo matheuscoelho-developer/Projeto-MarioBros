@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 200px;
+}
+
+button {
+    color: white; /*ALTERA A COR DE TEXTO*/
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase; /*DEIXA TOODO TEXTO EM MAISCULO*/
+    font-weight: bold; /*BOLD É NEGRITO*/
+    margin-top:40px; /*ESPAÇAMENTO ENTRE O TEXTO*/
+}
+
+.imagem-mario-luigi {
+    height: 500px;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*é uma ferramenta poderosa para controlar o alinhamento e o espaçamento de itens dentro de um contêiner flexível*/
+    padding: 100px;
+    height: 100vh; /*UNIDADE VH É 100 PEDAÇOS DA TELA INDEPENDENTE DO TAMANHO DA TELA*/
+}
+
+.caixa-principal {
+    width: 40%;
+}
+
+p {
+    color:white;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top:0%;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+.link-wpp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px; /*DISTANCIAMENTO ENTRE ITENS*/
+    margin: 30px; 
+}
+
+.header img {
+    height: 60px;
+}
+
+.header a {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color:#c51111;
+    font-size: 25px;
+    transition: 0.5s ease-in-out; /*CONTROLE DE ENTRADA E SAIDA*/
+}
+
+button:hover {
+    background-color: black;
+    width: 220px;
+    transition: 0.5s ease-in-out;
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    top:30%;
+    left:-320px;
+    padding: 30px;
+    border-radius: 5px;
+    gap:17px;
+    transition: left 1s ease-in-out; /*TRANSIÇÃO DA ESQUERDA DURANTE 1 SEGUNDO - EASE IN OUT CONTROLA A ENTRADA E SAÍDA*/
+}
+
+input {
+    height: 40px;
+    border: 1px solid grey;
+    padding-left: 7px;
+    outline-color: black; /* ADICIONA COR NO CAMPO DA CAIXA ONDE DIGITAR*/
+}
+
+textarea {
+    width: 270px;
+    height: 150px;
+    border: 1px solid grey;
+    padding-left: 7px;
+    outline-color: black;
+}
+
+.mascara-formulario {
+    visibility: hidden; /*VISIBILIDADE*/ /*HIDDEN É ESCONDIDO*/
+    position:fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+/*SEMPRE FICAR NA ULTIMA CONFIGURAÇÃO
+max -> valor menos que pixel, aplica o css do media
+min -> valor maior que npx, aplica o css do media*/
+
+@media(max-width: 1194px) { 
+
+    p {
+        display: none;
+    }
+
+    .caixa-mae {
+        flex-direction: column;
+        padding:10px;
+        justify-content: flex-start;
+    }
+
+    .caixa-principal {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .imagem-mario-luigi {
+        width: 80vw;
+        height:auto;
+    }
+     
+    .header {
+        margin:10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .header img {
+        display:none;
+    }
+
+    .header a {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+height: 60px;
+margin-top: 1rem;
+margin-left: 1rem;
+}
+
+.back {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top:0%;
+    z-index: -1;
+    filter: brightness(60%);
+}
+
+button {
+    color: white;
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+button:hover {
+    width: 220px;
+    transition: 0.5s ease-in-out;
+}
+
+section {
+    padding: 5rem 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section .box-container {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(20rem,1fr));
+    gap: 3.5rem;
+}
+
+section .box-container img {
+    height: 150px;
+}
+
+section .box-container .box {
+    text-align: center;
+    padding:1.7rem;
+}
+
+section .box-container .box:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+section .box-container .box:hover>* {
+    color: rgb(0, 0, 0);
+}
+
+section .box-container h3 {
+    color:rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+h1 span {
+    color:#c51111
+}
+
